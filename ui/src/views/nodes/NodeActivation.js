@@ -58,6 +58,10 @@ class NodeActivation extends Component {
                   <input className="form-control" id="fCntDown" type="number" required value={this.state.activation.fCntDown || 0} />
                 </div>
                 <div className="form-group">
+                  <label className="control-label" htmlFor="rx2DR">Uplink gap on frame counter</label>
+                  <input className="form-control" id="fCntGap" type="number" required value={this.state.activation.fCntGap || 0} />
+                </div>
+                <div className="form-group">
                   <label className="control-label" htmlFor="skipFCntCheck">Disable frame-counter validation</label>
                   <div className="checkbox">
                     <label>

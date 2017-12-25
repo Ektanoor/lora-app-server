@@ -793,6 +793,8 @@ type GetDeviceActivationResponse struct {
 	FCntDown uint32 `protobuf:"varint,4,opt,name=fCntDown" json:"fCntDown,omitempty"`
 	// Skip frame-counter checks (this is insecure, but could be helpful for debugging).
 	SkipFCntCheck bool `protobuf:"varint,5,opt,name=skipFCntCheck" json:"skipFCntCheck,omitempty"`
+	// Gap uplink frame-counter.
+	FCntGap int32 `protobuf:"varint,6,opt,name=fCntUp" json:"fCntGap,omitempty"`
 }
 
 func (m *GetDeviceActivationResponse) Reset()                    { *m = GetDeviceActivationResponse{} }
@@ -833,6 +835,13 @@ func (m *GetDeviceActivationResponse) GetSkipFCntCheck() bool {
 		return m.SkipFCntCheck
 	}
 	return false
+}
+
+func (m *GetDeviceActivationResponse) GetFCntGap() int32 {
+	if m != nil {
+		return m.FCntGap
+	}
+	return 0
 }
 
 type GetRandomDevAddrRequest struct {

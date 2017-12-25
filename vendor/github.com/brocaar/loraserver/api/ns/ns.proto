@@ -339,6 +339,9 @@ message GetDeviceActivationResponse {
 
     // Skip frame-counter checks (this is insecure, but could be helpful for debugging).
     bool skipFCntCheck = 5;
+
+    // Gap uplink frame-counter.
+    int32 fCntGap = 6;
 }
 
 

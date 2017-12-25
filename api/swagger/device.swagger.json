@@ -607,6 +607,11 @@
           "type": "boolean",
           "format": "boolean",
           "description": "Skip frame-counter checks (this is insecure, but could be helpful for debugging)."
+        },
+        "fCntGap": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Gap uplink frame-counter."
         }
       }
     },

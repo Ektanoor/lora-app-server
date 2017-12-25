@@ -433,6 +433,7 @@ func (a *DeviceAPI) GetActivation(ctx context.Context, req *pb.GetDeviceActivati
 		NwkSKey:       nwkSKey.String(),
 		FCntUp:        devAct.FCntUp,
 		FCntDown:      devAct.FCntDown,
+		FCntGap:       devAct.FCntGap,
 		SkipFCntCheck: devAct.SkipFCntCheck,
 	}, nil
 }
